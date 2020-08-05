@@ -1,1 +1,10 @@
-<p>heroes works!</p>
+<div>
+  <div *ngFor="let heroe of heroes">
+    <img [src]="heroe.img" [alt]="heroe.nombre">
+    <div>
+      <h4>{{ heroe.nombre}}</h4>
+      <p>{{ heroe.bio }}</p>
+      <p>{{ heroe.aparicion }}</p>
+    </div>
+  </div>
+</div>

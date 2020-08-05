@@ -66,6 +66,14 @@ export class HeroesService {
   public getHeroe(idx: number): Heroe {
     return this.heroes[idx];
   }
+
+  public findHeroes(value: string): Heroe[] {
+    value = value.toLocaleLowerCase();
+    const heroesArr: Heroe[] = this.heroes.filter(
+      (heroe: Heroe) => heroe.nombre.toLocaleLowerCase().indexOf(value) >= 0
+    );
+    return heroesArr;
+  }
 }
 
 export interface Heroe {

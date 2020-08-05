@@ -43,15 +43,16 @@
   padding: 8px;
 }
 
-.search input, .search label {
+.search input, .search button {
   border-radius: 8px;
   padding: 6px;
   font-size: 14px;
 }
-.search label {
+.search button {
   padding: 6px 16px;
   border: solid 1px #007bff;
   color: #007bff;
   display: inline-block;
   margin-left: 6px;
+  background-color: transparent;
 }

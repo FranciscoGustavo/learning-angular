@@ -25,9 +25,9 @@
       </ul>
     </div>
       
-    <form action="" class="search">
-      <input type="text" placeholder="Buscar Heroe">
-      <label for="">Buscar</label>
+    <form class="search">
+      <input type="text" placeholder="Buscar Heroe" (keyup.enter)="findHeroe(findText.value)" #findText>
+      <button type="button" (click)="findHeroe(findText.value)">Buscar</button>
     </form>
 
   </div>

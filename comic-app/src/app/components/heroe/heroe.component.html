@@ -1,18 +1,23 @@
-<div>
-  <h1>{{ heroe.nombre | uppercase }}<small>({{ heroe.aparicion | date:'y' }})</small></h1>
-</div>
-<div>
-  <div>
-    <img [src]="heroe.img" [alt]="heroe.nombre">
-    <a [routerLink]="['/heroes']">Regresar</a>
+<div class="heroe animated fadeIn fast">
+  
+  <div class="title">
+    <h1>{{ heroe.nombre | uppercase }}<small> ( {{ heroe.aparicion | date:'y' }} ) </small></h1>
   </div>
-
-  <div>
-    <h3>{{ heroe.nombre }}</h3>
-    <p>{{ heroe.bio }}</p>
+  
+  <div class="card-detail">
     <div>
-      <img *ngIf="heroe.casa == 'Marvel'" src="assets/img/marvel-logo.png" alt="Marvel">
-      <img *ngIf="heroe.casa == 'DC'" src="assets/img/dc-logo.jpg" alt="DC">
+      <img [src]="heroe.img" [alt]="heroe.nombre">
+      <a class="back" [routerLink]="['/heroes']">Regresar</a>
+    </div>
+    
+    <div class="detail">
+      <h3>{{ heroe.nombre }}</h3>
+      <p>{{ heroe.bio }}</p>
+      <div class="home">
+        <img *ngIf="heroe.casa == 'Marvel'" src="assets/img/marvel-logo.png" alt="Marvel">
+        <img *ngIf="heroe.casa == 'DC'" src="assets/img/dc-logo.jpg" alt="DC">
+      </div>
     </div>
   </div>
+
 </div>

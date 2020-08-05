@@ -1,0 +1,17 @@
+.home {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 32px;
+}
+
+.home div {
+  padding: 64px 16px;
+  background-color: #E9ECEF;
+}
+
+.home div h1 {
+  font-size: 64px;
+  font-weight: normal;
+  line-height: initial;
+}

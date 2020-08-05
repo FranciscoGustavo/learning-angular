@@ -16,6 +16,10 @@
   list-style: none;
 }
 
+.menu li.active a {
+  color: #fff;
+}
+
 .menu-and-logo {
   display: flex;
   justify-content: flex-start;

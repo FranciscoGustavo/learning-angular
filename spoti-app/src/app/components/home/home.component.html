@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="home">
+  <div class="card" *ngFor="let song of newSongs">
+    <img [src]="song.images[0].url" alt="">
+    <div class="card-body">
+      <h4>{{ song.name }}</h4>
+      <p class="badge" *ngFor="let artist of song.artists">
+        <span>
+          {{ artist.name }}
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

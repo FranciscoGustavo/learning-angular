@@ -3,7 +3,12 @@
     <h1>Buscando: <small>{{ value }}</small></h1>
   </div>
 
-  <div class="heroes-container">
-    <app-card-heroe [heroe]="heroe" [index]="index" *ngFor="let heroe of heroes; let i = index"></app-card-heroe>
+  <div class="heroes-container" *ngIf="heroes.length > 0">
+
+    <app-card-heroe [heroe]="heroe" [index]="heroe.id" *ngFor="let heroe of heroes"></app-card-heroe>
+  
+  </div>
+  <div class="not-found" *ngIf="heroes.length == 0">
+    <p>No encontramos ningun resultado</p>
   </div>
 </div>

@@ -26,8 +26,8 @@
     </div>
       
     <form class="search">
-      <input type="text" placeholder="Buscar Heroe" (keyup.enter)="findHeroe(findText.value)" #findText>
-      <button type="button" (click)="findHeroe(findText.value)">Buscar</button>
+      <input type="text" placeholder="Search heroe" (keyup)="findHeroe(findText.value)" #findText>
+      <button type="button" (click)="findHeroe(findText.value)">Search</button>
     </form>
 
   </div>

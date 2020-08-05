@@ -26,3 +26,8 @@
   orphans: 1;
   widows: 1;
 }
+
+.not-found {
+  padding: 64px 16px;
+  background-color: #E9ECEF;
+}

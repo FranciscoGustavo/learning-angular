@@ -70,16 +70,22 @@ export class HeroesService {
   public findHeroes(value: string): Heroe[] {
     value = value.toLocaleLowerCase();
     const heroesArr: Heroe[] = this.heroes.filter(
-      (heroe: Heroe) => heroe.nombre.toLocaleLowerCase().indexOf(value) >= 0
+      (heroe: Heroe, index: number) => {
+        if (heroe.nombre.toLocaleLowerCase().indexOf(value) >= 0) {
+          heroe.id = index;
+          return heroe;
+        }
+      }
     );
     return heroesArr;
   }
 }
 
 export interface Heroe {
-    nombre: string;
-    bio: string;
-    img: string;
-    aparicion: string;
-    casa: string;
+  nombre: string;
+  bio: string;
+  img: string;
+  aparicion: string;
+  casa: string;
+  id?: number;
 }

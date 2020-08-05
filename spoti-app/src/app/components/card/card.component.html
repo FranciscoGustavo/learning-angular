@@ -1,0 +1,11 @@
+<div class="card">
+  <img [src]="song.images[0].url" alt="">
+  <div class="card-body">
+    <h4>{{ song.name }}</h4>
+    <p class="badge" *ngFor="let artist of song.artists">
+      <span>
+        {{ artist.name }}
+      </span>
+    </p>
+  </div>
+</div>

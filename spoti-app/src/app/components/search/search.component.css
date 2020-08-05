@@ -1,0 +1,22 @@
+.search {
+  margin-top: 50px;
+}
+
+.search input {
+  display: block;
+  width: 100%;
+  padding: 7px 14px;
+  border-radius: 7px;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.home {
+  column-count: 3;
+  column-gap: 28px;
+  orphans: 1;
+  widows: 1;
+  margin-top: 100px;
+}

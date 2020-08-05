@@ -1,1 +1,7 @@
-<p>search works!</p>
+<div class="search">
+  <input type="text" #find (keyup)="findItem(find.value)" placeholder="Find something song">
+</div>
+
+<div class="home">
+  <app-card [song]="song" *ngFor="let song of songs"></app-card>
+</div>

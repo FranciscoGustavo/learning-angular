@@ -1,13 +1,15 @@
-<div>
-  <div *ngFor="let heroe of heroes; let i = index">
+<div class="heroes animated fadeIn">
+
+  <div class="card" *ngFor="let heroe of heroes; let i = index">
     <img [src]="heroe.img" [alt]="heroe.nombre">
     <div>
       <h4>{{ heroe.nombre}}</h4>
       <p>{{ heroe.bio }}</p>
-      <p>{{ heroe.aparicion }}</p>
+      <p class="card-date">{{ heroe.aparicion }}</p>
       <button (click)=watchHeroe(i)>
         ver más...
       </button>
     </div>
   </div>
+
 </div>
